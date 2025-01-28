@@ -23,7 +23,6 @@
     text-align: center;
     padding: 20px;
     background-color: $c-bg-dark;
-    border-radius: 10px;
 
     @include item-hover;
 
@@ -41,7 +40,7 @@
 
   &__item-title {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 28px;
     color: $c-accent;
     margin-bottom: 15px;
   }
