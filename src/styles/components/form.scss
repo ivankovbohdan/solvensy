@@ -1,0 +1,52 @@
+.form {
+  &__input {
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    padding: 14px 11px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 142%;
+    color: $c-light;
+    margin-bottom: 16px;
+    background-color: #eae5e5;
+    border: 1px solid transparent;
+    transition: border-color 0.5s;
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 142%;
+      color: #8d8d92;
+      transition: color 0.5s;
+    }
+
+    &--message {
+      resize: none;
+      height: 144px;
+    }
+
+    &:hover,
+    &:focus {
+      &::placeholder {
+        color: $c-dark;
+      }
+    }
+
+    &:hover {
+      border-color: $c-dark;
+    }
+
+    &:focus {
+      border-color: $c-dark;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}

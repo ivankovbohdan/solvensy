@@ -1,0 +1,48 @@
+.milestones {
+  padding: 60px 0;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+
+    @include onDesktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: $c-bg-dark;
+    border-radius: 10px;
+
+    @include item-hover;
+
+    &--large {
+      background-color: transparent;
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+
+      .milestones__item-title {
+        font-size: 72px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 32px;
+    color: $c-accent;
+    margin-bottom: 15px;
+  }
+}

@@ -1,3 +1,117 @@
-body {
-  margin: 0;
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/extends';
+@import 'utils/typography';
+@import 'components/icon';
+@import 'components/top-bar';
+@import 'components/header-content';
+@import 'components/menu';
+@import 'components/nav';
+@import 'components/socials';
+@import 'components/form';
+@import 'components/btn';
+@import 'components/sections/header';
+@import 'components/sections/hero';
+@import 'components/sections/about';
+@import 'components/sections/milestones';
+@import 'components/sections/services';
+@import 'components/sections/team';
+@import 'components/sections/contacts';
+@import 'components/sections/footer';
+
+
+.page {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  background: $c-dark;
+
+  // font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $c-white;
+
+  &__body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  &__main {
+    flex: 1;
+  }
+
+  &__menu {
+    overflow: auto;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    transition: opacity 0.5s, transform 0.5s;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__menu:target {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  &:has(.page__menu:target) {
+    overflow: hidden;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  padding-inline: 20px;
+
+  @include onTablet {
+    padding-inline: 41px;
+  }
+
+  @include onDesktop {
+    max-width: 914px;
+    margin: 0 auto;
+    padding-inline: 0;
+  }
+
+  @include onDesktop-big {
+    max-width: 1040px;
+  }
+}
+
+.section {
+  padding: 30px 0;
+
+  @include onTablet {
+    padding: 60px 0;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 28px;
+  margin: 0 0 25px;
 }

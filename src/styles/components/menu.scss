@@ -1,0 +1,10 @@
+.menu {
+  z-index: 100;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: $c-accent;
+
+  &__top-bar {
+    margin-bottom: 25px;
+  }
+}

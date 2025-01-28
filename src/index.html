@@ -1,13 +1,419 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="page">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Miami</title>
-    <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="stylesheet" href="./styles/main.scss" />
     <script src="scripts/main.js" defer></script>
   </head>
-  <body>
-    <h1>Landing Page</h1>
+  <body class="page__body" id="body">
+    <header class="header">
+      <div class="container header__container">
+        <div class="top-bar">
+          <img
+            class="logo"
+            src="./images/solvensy-logo.svg"
+            alt="Solvensy logo"
+          />
+
+          <a class="header__menu-btn icon icon--menu" href="#menu">
+            <span class="sr-only">Open menu</span>
+          </a>
+        </div>
+
+        <div class="header-content header-content--desktop">
+          <nav class="nav header__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#about"> About us </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#services"> Services </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#team"> Team </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#contacts"> Contact Us </a>
+              </li>
+            </ul>
+          </nav>
+
+          <a
+            class="header-content__phone header-content__phone--desktop"
+            href="tel:+786-233-6410"
+          >
+            786-233-6410
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <aside class="menu page__menu" id="menu">
+      <div class="container">
+        <div class="top-bar menu__top-bar">
+          <img
+            class="logo"
+            src="./images/solvensy-logo.svg"
+            alt="Solvensy logo"
+          />
+
+          <a class="icon icon--close" href="#">
+            <span class="sr-only">Close menu</span>
+          </a>
+        </div>
+
+        <div class="header-content">
+          <nav class="nav header-content__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#about"> About us </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#services"> Services </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#team"> Team </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#contacts"> Contact Us </a>
+              </li>
+            </ul>
+          </nav>
+
+          <a
+            class="header-content__phone header-content__phone--menu"
+            href="tel:+786-233-6410"
+          >
+            786-233-6410
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main page__main">
+      <section class="hero section">
+        <div class="container hero__container">
+          <img
+            class="hero__img"
+            src="./images/hero-img.png"
+            alt="Woman at the table with a tablet in her hands"
+          />
+
+          <div class="hero__offer">
+            <span class="hero__supertitle"></span>
+            <h1 class="hero__title">bookkeeping & accounting</h1>
+            <p class="hero__text">
+              Comprehensive accounting services for all types of businesses in
+              the USA: from registration to tax filing. Accounting support
+              includes bookkeeping, accounting, invoicing, reporting & filing
+            </p>
+            <a class="hero__btn btn" href="#">Get support</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="container about__container">
+          <div class="about__info">
+            <div class="about__title title">About us</div>
+            <p class="about__text">
+              Welcome to Solvensy - your trusted partner in accounting and
+              financial management in the United States. With 16 years of
+              practical experience, we specialize in delivering tailored
+              solutions for businesses of all sizes, ensuring compliance,
+              efficiency, and growth.
+            </p>
+          </div>
+
+          <video class="about__video" autoplay loop muted>
+            <source src="./videos/about-us-video.mp4" type="video/mp4" />
+            <source src="./videos/about-us-video.mp4" type="video/mp4" />
+            Ваш браузер не підтримує відео. Завантажте його
+            <a href="./videos/about-us-video.mp4">тут</a>.
+          </video>
+        </div>
+      </section>
+
+      <div class="milestones" id="milestones">
+        <div class="container">
+          <ul class="milestones__list">
+            <li class="milestones__item milestones__item--large">
+              <span class="milestones__item-title">16+</span>
+              years of supporting clients in accounting and finance
+            </li>
+            <li class="milestones__item">
+              <span class="milestones__item-title">600+</span>
+              clients under ongoing support
+            </li>
+            <li class="milestones__item">
+              <span class="milestones__item-title">100%</span>
+              guarantee of confidentiality and protection of customer
+              information
+            </li>
+            <li class="milestones__item">
+              <span class="milestones__item-title">35+</span>
+              people on the team
+            </li>
+            <li class="milestones__item">
+              <span class="milestones__item-title">>200</span>
+              inspections successfully carried out by our company
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="services section" id="services">
+        <div class="container">
+          <h2 class="services__title title">Our services</h2>
+          <ul class="services__list">
+            <li class="services__item">
+              <img
+                class="services__item-icon"
+                src="./images/icons/icon-setup.svg"
+                alt="Setup icon"
+              />
+              <div class="services__item-info">
+                <h3 class="services__item-title">Setup</h3>
+                <p class="services__item-text">
+                  registering, onboarding, ORganize accounting
+                </p>
+                <span class="services__item-price">from $200</span>
+              </div>
+            </li>
+            <li class="services__item">
+              <img
+                class="services__item-icon"
+                src="./images/icons/icon-support.svg"
+                alt="Support icon"
+              />
+              <div class="services__item-info">
+                <h3 class="services__item-title">Support</h3>
+                <p class="services__item-text">
+                  bookkeeping, Invoicing, Payroll, tax & financial planning
+                </p>
+                <span class="services__item-price">from $100</span>
+              </div>
+            </li>
+            <li class="services__item">
+              <img
+                class="services__item-icon"
+                src="./images/icons/icon-report.svg"
+                alt="Report icon"
+              />
+              <div class="services__item-info">
+                <h3 class="services__item-title">Reports</h3>
+                <p class="services__item-text">annual, financial reporting</p>
+                <span class="services__item-price">from $250</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="team section" id="team">
+        <div class="container">
+          <h2 class="team__title title">Team members</h2>
+
+          <ul class="team__list">
+            <li class="team__item">
+              <div class="team__item-photo-block">
+                <img
+                  class="team__item-photo"
+                  src="./images/team/management.jpg"
+                  alt="Manager photo"
+                />
+              </div>
+              <h3 class="team__item-position">Management</h3>
+            </li>
+
+            <li class="team__item">
+              <div class="team__item-photo-block">
+                <img
+                  class="team__item-photo"
+                  src="./images/team/support.jpg"
+                  alt="Supporter photo"
+                />
+              </div>
+              <h3 class="team__item-position">Support</h3>
+            </li>
+
+            <li class="team__item">
+              <div class="team__item-photo-block">
+                <img
+                  class="team__item-photo"
+                  src="./images/team/consalting.jpg"
+                  alt="Consultant photo"
+                />
+              </div>
+              <h3 class="team__item-position">Consalting</h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="contacts section" id="contacts">
+        <div class="container">
+          <div class="contacts__inner">
+            <div class="contacts__info">
+              <h2 class="contacts__title title">Get <span>support</span></h2>
+
+              <p class="contacts__text">
+                Leave your details and we will contact you!
+              </p>
+            </div>
+
+            <form
+              class="contacts__form form"
+              action="#"
+              onsubmit="this.reset(); return false;"
+            >
+              <label for="name">
+                <span class="sr-only">Please, enter your name!</span>
+              </label>
+
+              <input
+                class="form__input"
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Name"
+                required
+              />
+
+              <label for="phone">
+                <span class="sr-only">Please, enter your phone!</span>
+              </label>
+
+              <input
+                class="form__input"
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Phone"
+                required
+              />
+
+              <label for="email">
+                <span class="sr-only">Please, enter your email!</span>
+              </label>
+
+              <input
+                class="form__input"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email"
+              />
+
+              <label for="business">
+                <span class="sr-only">Please, enter your business!</span>
+              </label>
+
+              <input
+                class="form__input"
+                id="business"
+                name="business"
+                type="text"
+                placeholder="Business"
+              />
+
+              <label for="message">
+                <span class="sr-only">Please, enter your message!</span>
+              </label>
+
+              <textarea
+                class="form__input form__input--message"
+                id="message"
+                name="message"
+                placeholder="Message"
+              ></textarea>
+
+              <button class="form__btn btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <nav class="nav footer__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#about"> About us </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#services"> Services </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#team"> Team </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contacts"> Contact Us </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="container footer__container">
+          <img
+            class="logo footer__logo"
+            src="./images/solvensy-logo.svg"
+            alt="Solvensy logo"
+          />
+
+          <ul class="socials">
+            <li class="socials__item">
+              <a
+                class="socials__item-link icon icon--facebook"
+                href="https://www.facebook.com/SolvensyOutsourcingCompany"
+                target="_blank"
+              >
+                <span class="sr-only">Open Facebook</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a
+                class="socials__item-link icon icon--linkedin"
+                href="https://www.linkedin.com/company/solvensy-outsourcing-company"
+                target="_blank"
+              >
+                <span class="sr-only">Open LinkedIn</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a
+                class="socials__item-link icon icon--whatsup"
+                href="https://wa.me/17862336410"
+                target="_blank"
+              >
+                <span class="sr-only">Open WhatsUp</span>
+              </a>
+            </li>
+
+            <li class="socials__item">
+              <a
+                class="socials__item-link icon icon--telegram"
+                href="https://t.me/solvensy"
+                target="_blank"
+              >
+                <span class="sr-only">Open Telegram</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="footer__phones">
+            <li class="footer__phones-item">
+              <a class="footer__phone" href="tel:+786-233-6410">786-233-6410</a>
+            </li>
+          </ul>
+
+          <a class="footer__go-top" href="#body">Go to top</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,38 @@
+.btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  letter-spacing: 0.2em;
+  color: inherit;
+  background-color: $c-accent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 400;
+
+  @include onTablet {
+    letter-spacing: 0.3em;
+  }
+
+  @include onDesktop {
+    margin: 0;
+    transition: color 0.5s, box-shadow 0.5s, background-color 0.5s;
+
+    &:hover {
+      color: $c-accent;
+      background-color: $c-white;
+    }
+
+    &:focus {
+      outline: transparent;
+      box-shadow: 0 0 0 2px $c-white;
+    }
+
+    &:active {
+      background-color: $c-light;
+    }
+  }
+}
