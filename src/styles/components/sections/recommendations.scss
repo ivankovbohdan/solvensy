@@ -75,6 +75,15 @@
     object-position: top center;
     aspect-ratio: 1 / 1;
 
+    transition:
+    box-shadow 0.5s,
+    transform 0.5s;
+
+  &:hover {
+    box-shadow: 0 0 15px 5px #c4161c80;
+    transform: scale(2.4);
+  }
+
     // @include onTablet {
     //   max-width: 320px;
     //   max-height: 320px;
@@ -84,12 +93,7 @@
       width: 70%;
       height: 70%;
 
-      transition:
-        box-shadow 0.5s,
-        transform 0.5s;
-
       &:hover {
-        box-shadow: 0 0 15px 5px #c4161c80;
         transform: scale(1.5);
       }
     }

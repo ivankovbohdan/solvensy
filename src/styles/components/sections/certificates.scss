@@ -43,18 +43,22 @@
     max-width: 150px;
     max-height: 150px;
 
+    transition:
+      box-shadow 0.5s,
+      transform 0.5s;
+
+    &:hover {
+      box-shadow: 0 0 15px 5px #c4161c80;
+      transform: scale(1.9) translate(0, -10px);
+    }
+
     @include onTablet {
       max-width: 380px;
     }
 
     @include onDesktop {
-      transition:
-        box-shadow 0.5s,
-        transform 0.5s;
-
       &:hover {
-        box-shadow: 0 0 15px 5px #c4161c80;
-        transform: scale(2.1) translate(0, -10px);
+        transform: scale(2.1);
       }
     }
   }
