@@ -53,8 +53,8 @@
       &:hover {
         background-color: $c-accent;
 
-        .services__item-icon g path{
-          fill: $c-white;
+        .services__item-icon{
+          color: $c-white;
         }
 
         .services__item-price {
@@ -66,24 +66,27 @@
   }
 
   &__item-icon {
-    width: 74px;
-    height: 74px;
+    font-size: 74px;
+    // width: 74px;
+    // height: 74px;
     margin-bottom: 30px;
+    color: $c-accent;
 
     @include onTablet {
-      width: 100%;
-      height: 50%;
+      font-size: 150px;
+      width: 50%;
+      text-align: center;
+      // height: 50%;
       align-self: center;
     }
 
     @include onDesktop {
-      width: 74px;
-      height: 74px;
+    font-size: 74px;
+      text-align: left;
+      // width: 74px;
+      // height: 74px;
       align-self: start;
-
-      g path{
-        transition: fill 0.5s;
-      }
+      transition: color 0.5s;
     }
   }
 

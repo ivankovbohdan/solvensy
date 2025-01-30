@@ -1,5 +1,4 @@
 .footer {
-
   &__top {
     display: flex;
     align-items: center;
@@ -18,7 +17,7 @@
     align-items: center;
     gap: 35px;
 
-    @include onDesktop{
+    @include onDesktop {
       flex-direction: row;
       justify-content: space-between;
     }
@@ -36,28 +35,32 @@
     text-decoration: none;
     color: inherit;
     display: flex;
-    padding-left: 32px;
+    padding-left: 38px;
     position: relative;
     display: flex;
     align-items: center;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 16px;
-      height: 16px;
-      background-image: url('../images/icons/icon-phone.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
 
     @include onDesktop {
       transition: color 0.5s;
 
       &:hover {
         color: $c-light;
+
+        .footer__phone-icon {
+          color: $c-light;
+        }
       }
+    }
+  }
+
+  &__phone-icon {
+    position: absolute;
+    left: 0;
+    font-size: 28px;
+    color: $c-white;
+
+    @include onDesktop {
+      transition: color 0.5s;
     }
   }
 
@@ -68,21 +71,17 @@
     padding-left: 18px;
     position: relative;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      width: 12px;
-      height: 12px;
-      background-image: url('../images/icons/icon-arrow-top.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
 
     @include onDesktop {
       @include hover-line;
     }
+  }
+
+  &__go-top-icon {
+    position: absolute;
+    left: 0;
+    font-size: 12px;
   }
 }

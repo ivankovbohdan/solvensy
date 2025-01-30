@@ -128,7 +128,7 @@
     letter-spacing: 0.2em;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 5px;
 
     @include onDesktop {
       transition: color 0.5s;
@@ -136,19 +136,19 @@
       &:hover {
         color: $c-white;
 
-        .recommendations__link-icon path {
-          fill: $c-white;
+        .recommendations__link-icon {
+          color: $c-white;
         }
       }
     }
   }
 
   &__link-icon {
-    width: 20px;
-    height: 20px;
+    font-size: 20px;
+    color: $c-accent;
 
-    path {
-      transition: fill 0.5s;
+    @include onDesktop {
+      transition: color 0.5s;
     }
   }
 }
