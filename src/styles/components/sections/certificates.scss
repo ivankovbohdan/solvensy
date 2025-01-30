@@ -1,11 +1,4 @@
-.team {
-  &:hover {
-    .team__item-photo {
-      box-shadow: 0 0 15px 5px #c4161c80;
-      transform: scale(1.05);
-    }
-  }
-
+.certificates {
   &__title {
     text-align: center;
   }
@@ -30,20 +23,6 @@
       justify-content: center;
       gap: 5rem;
     }
-
-    // display: grid;
-    // grid-template-columns: 1fr;
-    // gap: 25px;
-
-    // @include onTablet {
-    //   grid-template-columns: repeat(3, 1fr);
-    //   gap: 45px;
-    // }
-
-    // @include onDesktop {
-    //   justify-content: space-between;
-
-    // }
   }
 
   &__item {
@@ -52,38 +31,31 @@
     align-items: center;
 
     @include onDesktop {
-
     }
   }
 
-  &__item-photo {
+  &__photo {
     display: flex;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: top;
-    max-width: 250px;
-    max-height: 250px;
-    aspect-ratio: 1 / 1;
+    max-width: 150px;
+    max-height: 150px;
 
     @include onTablet {
       max-width: 380px;
     }
 
-    // @include onTablet {
-    //   max-width: 320px;
-    //   max-height: 320px;
-    // }
-
     @include onDesktop {
       transition:
         box-shadow 0.5s,
         transform 0.5s;
-    }
-  }
 
-  &__item-position {
-    color: $c-accent;
-    letter-spacing: 0.2em;
+      &:hover {
+        box-shadow: 0 0 15px 5px #c4161c80;
+        transform: scale(2.1) translate(0, -10px);
+      }
+    }
   }
 }
