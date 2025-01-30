@@ -11,21 +11,31 @@
 
   &__text {
     margin: 0;
-  }
-
-  &__video {
-    box-shadow: 11px 11px 15px -5px #c4161c80;
-    width: 100%;
+    padding: 0 15px 15px 0;
+    // box-shadow: 11px 11px 15px -5px #c4161c80;
 
     @include onTablet {
-      box-shadow: 14px 14px 15px -5px #c4161c80;
-      max-width: 680px;
-      margin: 0 auto;
+      // box-shadow: 14px 14px 15px -5px #c4161c80;
     }
 
     @include onDesktop {
-      box-shadow: 23px 23px 15px -5px #c4161c80;
-      max-width: 380px;
+      // box-shadow: 23px 23px 15px -5px #c4161c80;
     }
+
   }
+
+  // &__video {
+  //   width: 100%;
+
+  //   @include onTablet {
+  //     box-shadow: 14px 14px 15px -5px #c4161c80;
+  //     max-width: 680px;
+  //     margin: 0 auto;
+  //   }
+
+  //   @include onDesktop {
+  //     box-shadow: 23px 23px 15px -5px #c4161c80;
+  //     max-width: 380px;
+  //   }
+  // }
 }
