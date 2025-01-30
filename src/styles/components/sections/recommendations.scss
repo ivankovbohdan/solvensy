@@ -43,6 +43,13 @@
       // width: 100%;
       // width: 100%;
       // height: 500px;
+
+      &:hover {
+        .recommendations__photo, .recommendations__video {
+
+          box-shadow: 0 0 15px 5px #c4161c80;
+        }
+      }
     }
   }
 
@@ -55,33 +62,34 @@
     }
   }
 
-  &__photo-block {
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $c-bg-dark;
-    // overflow: hidden;
-    aspect-ratio: 1 / 1;
+  // &__photo-block {
+  //   padding: 15px;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   background-color: $c-bg-dark;
+  //   // overflow: hidden;
+  //   aspect-ratio: 1 / 1;
 
-    // max-width: 250px;
-    // max-height: 250px;
+  //   // max-width: 250px;
+  //   // max-height: 250px;
 
-    @include onTablet {
-      // max-width: 380px;
-      // width: 100%;
-      // height: 100%;
-    }
-  }
+  //   @include onTablet {
+  //     // max-width: 380px;
+  //     // width: 100%;
+  //     // height: 100%;
+  //   }
+  // }
 
   &__photo,
   &__video {
     display: flex;
     width: 100%;
+    // width: 110%;
     object-fit: cover;
     object-position: center;
     // aspect-ratio: 2 / 1;
-    aspect-ratio: 1.77 / 1;
+    aspect-ratio: 1.77 / 1.05;
 
     // @include onTablet {
     //   max-width: 320px;
@@ -94,19 +102,12 @@
   }
 
   &__photo {
+    // object-fit: cover;
     transition:
       box-shadow 0.5s,
       transform 0.5s;
 
-    &:hover {
-      box-shadow: 0 0 15px 5px #c4161c80;
-      transform: scale(1.4);
-    }
-
     @include onDesktop {
-      &:hover {
-        transform: scale(1.5);
-      }
     }
   }
 
@@ -114,9 +115,7 @@
     transition: box-shadow 0.5s;
 
     @include onDesktop {
-      &:hover {
-        box-shadow: 0 0 15px 5px #c4161c80;
-      }
+
     }
   }
 
