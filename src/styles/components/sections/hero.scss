@@ -20,7 +20,6 @@
   &__img {
     box-shadow: -11px 11px 15px -5px #c4161c80;
     width: 100%;
-    // border-radius: 10px;
 
     @include onTablet {
       box-shadow: -14px 14px 15px -5px #c4161c80;
@@ -47,7 +46,6 @@
   }
 
   &__btn {
-
 
     @include onTablet {
       max-width: 270px;

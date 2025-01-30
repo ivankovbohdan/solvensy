@@ -106,7 +106,6 @@
     />
 
     <link rel="stylesheet" href="./styles/main.scss" />
-    <script src="scripts/main.js" defer></script>
   </head>
   <body class="page__body" id="body">
     <header class="header">
@@ -235,6 +234,8 @@
       </section>
 
       <div class="milestones" id="milestones">
+        <h2 class="sr-only">Milestones</h2>
+
         <div class="container">
           <ul class="milestones__list">
             <li class="milestones__item milestones__item--large">
@@ -306,7 +307,7 @@
             <li class="team__item">
               <img
                 class="team__item-photo"
-                src="./images/team/management.jpg"
+                src="./images/team/management.png"
                 alt="Manager photo"
               />
 
@@ -326,7 +327,7 @@
             <li class="team__item">
               <img
                 class="team__item-photo"
-                src="./images/team/support.jpg"
+                src="./images/team/support.png"
                 alt="Supporter photo"
               />
 
@@ -346,7 +347,7 @@
             <li class="team__item">
               <img
                 class="team__item-photo"
-                src="./images/team/consalting.jpg"
+                src="./images/team/consalting.png"
                 alt="Consultant photo"
               />
 
@@ -442,7 +443,7 @@
         </div>
       </section>
 
-      <div class="contacts section" id="contacts">
+      <section class="contacts section" id="contacts">
         <div class="container">
           <div class="contacts__inner">
             <div class="contacts__info">
@@ -528,7 +529,7 @@
             </form>
           </div>
         </div>
-      </div>
+      </section>
 
       <section class="recommendations section">
         <div class="container">
@@ -554,12 +555,6 @@
             </li>
 
             <li class="recommendations__item">
-              <!-- <img
-                class="recommendations__photo"
-                src="./images/recommendations/rec-volo.jpg"
-                alt="Recommendation from Volo"
-              /> -->
-
               <iframe
                 class="recommendations__video"
                 src="https://www.youtube.com/embed/bq4txUO2tVI?si=bSxPh7yAI0y_QoJ2&amp;controls=0"
@@ -573,7 +568,7 @@
               <h3 class="recommendations__item-title">Volo</h3>
               <a
                 class="recommendations__link"
-                href="https://docs.google.com/document/d/1GlqRMeeipSWLpW7rbHfrqfHKqHGFfo9R4whDkg7_I6k/edit?usp=sharing"
+                href="https://www.youtube.com/embed/bq4txUO2tVI?si=bSxPh7yAI0y_QoJ2&amp;controls=0"
                 target="_blank"
                 >View details
                 <i class="material-icons recommendations__link-icon">east</i>
@@ -597,11 +592,6 @@
               </a>
             </li>
             <li class="recommendations__item">
-              <!-- <img
-                class="recommendations__photo"
-                src="./images/recommendations/rec-ssm.jpg"
-                alt="Recommendation from SSMSTUDIO"
-              /> -->
               <iframe
                 class="recommendations__video"
                 src="https://www.youtube.com/embed/R_aBbLLg7No?si=xSPQRVH30LkUaYEH&amp;controls=0"
@@ -615,7 +605,7 @@
               <h3 class="recommendations__item-title">SSMSTUDIO</h3>
               <a
                 class="recommendations__link"
-                href="https://docs.google.com/document/d/1GlqRMeeipSWLpW7rbHfrqfHKqHGFfo9R4whDkg7_I6k/edit?usp=sharing"
+                href="https://www.youtube.com/embed/R_aBbLLg7No?si=xSPQRVH30LkUaYEH&amp;controls=0"
                 target="_blank"
                 >View details
                 <i class="material-icons recommendations__link-icon">east</i>
@@ -744,32 +734,6 @@
       </div>
     </footer>
 
-    <script>
-      const form = document.querySelector(".contacts__form");
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Перешкоджаємо стандартному відправленню форми
-
-        const formData = new FormData(form);
-
-        fetch(form.action, {
-          method: "POST",
-          body: formData,
-        })
-          .then((response) => response.json()) // Очікуємо на JSON-відповідь
-          .then((data) => {
-            if (data.status === "success") {
-              alert(data.message); // Покажемо повідомлення, якщо форма відправлена успішно
-              form.reset(); // Очищаємо форму після успішної відправки
-            } else {
-              alert(data.message); // Покажемо повідомлення про помилку
-            }
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            alert("An error occurred. Please try again.");
-          });
-      });
-    </script>
+    <script src="scripts/main.js" defer></script>
   </body>
 </html>

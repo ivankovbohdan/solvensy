@@ -30,20 +30,6 @@
       justify-content: center;
       gap: 5rem;
     }
-
-    // display: grid;
-    // grid-template-columns: 1fr;
-    // gap: 25px;
-
-    // @include onTablet {
-    //   grid-template-columns: repeat(3, 1fr);
-    //   gap: 45px;
-    // }
-
-    // @include onDesktop {
-    //   justify-content: space-between;
-
-    // }
   }
 
   &__item {
@@ -69,11 +55,6 @@
     @include onTablet {
       max-width: 380px;
     }
-
-    // @include onTablet {
-    //   max-width: 320px;
-    //   max-height: 320px;
-    // }
 
     @include onDesktop {
       transition:

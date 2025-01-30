@@ -17,7 +17,6 @@
     @include onTablet {
       flex-direction: row;
       flex-wrap: wrap;
-      // gap: 35px;
     }
 
     @include onDesktop {
@@ -31,18 +30,9 @@
     flex-direction: column;
     gap: 15px;
     width: 280px;
-    // height: 300px;
-
-    // align-items: center;
 
     @include onDesktop {
-      // max-width: 400px;
-      // width: 290px;
       flex-basis: 30%;
-      // height: 100%;
-      // width: 100%;
-      // width: 100%;
-      // height: 500px;
 
       &:hover {
         .recommendations__photo, .recommendations__video {
@@ -55,54 +45,22 @@
 
   &__item-title {
     margin: 0;
-    // flex-grow: 1;
 
     @include onDesktop {
       transition: color 0.5s;
     }
   }
 
-  // &__photo-block {
-  //   padding: 15px;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   background-color: $c-bg-dark;
-  //   // overflow: hidden;
-  //   aspect-ratio: 1 / 1;
-
-  //   // max-width: 250px;
-  //   // max-height: 250px;
-
-  //   @include onTablet {
-  //     // max-width: 380px;
-  //     // width: 100%;
-  //     // height: 100%;
-  //   }
-  // }
-
   &__photo,
   &__video {
     display: flex;
     width: 100%;
-    // width: 110%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
-    // aspect-ratio: 2 / 1;
-    aspect-ratio: 1.77 / 1;
-
-    // @include onTablet {
-    //   max-width: 320px;
-    //   max-height: 320px;
-    // }
-
-    @include onDesktop {
-      // height: 70%;
-    }
+    aspect-ratio: 1.77 / 0.99;
   }
 
   &__photo {
-    // object-fit: cover;
     transition:
       box-shadow 0.5s,
       transform 0.5s;
