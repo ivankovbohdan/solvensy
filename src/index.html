@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="page">
   <head>
     <meta charset="UTF-8" />
@@ -117,7 +117,19 @@
             alt="Solvensy logo"
           />
 
-          <a class="header__menu-btn icon icon--menu" href="#menu">
+          <a class="phone phone--tablet" href="tel:+786-233-6410">
+            <i
+              class="material-icons phone__icon"
+              >call</i
+            >
+
+            + 1&nbsp;&nbsp;786-233-6410
+          </a>
+
+          <a class="top-bar__menu-btn" href="#menu">
+            <i class="material-icons top-bar__menu-btn-icon"
+              >menu
+            </i>
             <span class="sr-only">Open menu</span>
           </a>
         </div>
@@ -141,12 +153,12 @@
           </nav>
 
           <a
-            class="header-content__phone header-content__phone--desktop"
+            class="phone phone--desktop"
             href="tel:+786-233-6410"
           >
-            <i class="material-icons header-content__phone-icon">call</i>
+            <i class="material-icons phone__icon">call</i>
 
-            786-233-6410
+            + 1&nbsp;&nbsp;786-233-6410
           </a>
         </div>
       </div>
@@ -161,7 +173,10 @@
             alt="Solvensy logo"
           />
 
-          <a class="icon icon--close" href="#">
+          <a class="top-bar__menu-btn" href="#">
+            <i class="material-icons top-bar__menu-btn-icon top-bar__menu-btn-icon--close"
+            >close
+          </i>
             <span class="sr-only">Close menu</span>
           </a>
         </div>
@@ -184,13 +199,13 @@
             </ul>
           </nav>
 
-          <a class="header-content__phone" href="tel:+786-233-6410">
+          <a class="phone" href="tel:+786-233-6410">
             <i
-              class="material-icons header-content__phone-icon header-content__phone-icon--menu"
+              class="material-icons phone__icon phone__icon--menu"
               >call</i
             >
 
-            786-233-6410
+            + 1&nbsp;&nbsp;786-233-6410
           </a>
         </div>
       </div>
@@ -458,7 +473,7 @@
 
             <form
               class="contacts__form form"
-              action="http://localhost/contact-form-handler.php"
+              action="./contact-form-handler.php"
               method="POST"
             >
               <label for="name">
@@ -471,6 +486,7 @@
                 name="name"
                 type="text"
                 placeholder="Name"
+                autocomplete="off"
                 required
               />
 
@@ -484,6 +500,7 @@
                 name="phone"
                 type="tel"
                 placeholder="Phone"
+                autocomplete="off"
                 required
               />
 
@@ -496,6 +513,7 @@
                 id="email"
                 name="email"
                 type="email"
+                autocomplete="off"
                 placeholder="Email"
               />
 
@@ -508,6 +526,7 @@
                 id="business"
                 name="business"
                 type="text"
+                autocomplete="off"
                 placeholder="Business"
               />
 
@@ -723,7 +742,7 @@
             <li class="footer__phones-item">
               <a class="footer__phone" href="tel:+786-233-6410">
                 <i class="material-icons footer__phone-icon">call</i>
-                +1 786-233-6410
+                +1&nbsp;&nbsp;786-233-6410
               </a>
             </li>
           </ul>

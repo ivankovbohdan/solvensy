@@ -16,47 +16,4 @@
       margin: 0;
     }
   }
-
-  &__phone {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 700;
-    font-size: 20px;
-    padding-left: 38px;
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    &--desktop {
-      display: none;
-
-      @include onDesktop {
-        display: block;
-        transition: color 0.5s;
-
-        &:hover {
-          color: $c-light;
-
-          .header-content__phone-icon {
-            color: $c-accent;
-          }
-        }
-      }
-    }
-  }
-
-  &__phone-icon {
-    position: absolute;
-    left: 0;
-    font-size: 28px;
-    color: $c-accent-light;
-
-    &--menu {
-      color: $c-white;
-    }
-
-    @include onDesktop {
-      transition: color 0.5s;
-    }
-  }
 }
